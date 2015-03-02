@@ -198,3 +198,13 @@ var FlashDetect = new function(){
     }();
 };
 FlashDetect.JS_RELEASE = "1.0.4";
+
+if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(function () {
+       return FlashDetect;
+    });
+} else if (typeof module === 'object' && typeof module.exports === 'object') {
+    // CommonJS
+    module.exports = FlashDetect;
+}
